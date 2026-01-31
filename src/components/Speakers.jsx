@@ -40,7 +40,6 @@ const Speakers = () => {
 
     return (
         <section ref={sectionRef} className="py-20 bg-black text-white relative overflow-hidden">
-            {/* Decor */}
             <div className="absolute right-0 top-1/2 -translate-y-1/2 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl -z-10"></div>
 
             <div className="container mx-auto px-4">
@@ -55,7 +54,6 @@ const Speakers = () => {
                             ref={el => cardsRef.current[index] = el}
                             className="group relative"
                         >
-                            {/* Card */}
                             <div className="bg-slate-900/50 backdrop-blur-md p-6 rounded-2xl border border-slate-700 hover:border-cyan-400 transition-all duration-300 h-full flex flex-col items-center text-center overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-t from-cyan-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
@@ -71,7 +69,6 @@ const Speakers = () => {
                                 <p className="text-purple-400 font-bold mb-1">{speaker.role}</p>
                                 <p className="text-slate-400 text-sm mb-4">{speaker.company}</p>
 
-                                {/* Social Icons */}
                                 <div className="flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
                                     <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors text-xl">
                                         <FaLinkedin />
@@ -81,7 +78,6 @@ const Speakers = () => {
                                     </a>
                                 </div>
 
-                                {/* Glitch bar */}
                                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
                             </div>
                         </div>

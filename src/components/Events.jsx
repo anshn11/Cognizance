@@ -39,7 +39,7 @@ const Events = () => {
 
     return (
         <section ref={sectionRef} className="py-20 bg-black text-white relative overflow-hidden">
-            {/* Ambient Glow */}
+            {/*Ambient Glow*/}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-96 bg-purple-900/20 blur-[100px] -z-10"></div>
 
             <div className="container mx-auto px-4">

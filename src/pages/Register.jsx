@@ -16,7 +16,7 @@ const Register = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // In a real app, send data to backend here
+        
         alert("Registration Successful!");
         navigate('/');
     };

@@ -18,7 +18,6 @@ const Hero = () => {
                 ease: "power3.out",
                 delay: 0.2
             });
-            // Changed to fromTo to ensure valid start/end states
             gsap.fromTo(btnRef.current,
                 { scale: 0.8, opacity: 0 },
                 {
@@ -36,7 +35,6 @@ const Hero = () => {
 
     return (
         <section ref={heroRef} className="h-screen flex flex-col items-center justify-center text-center px-4 relative overflow-hidden text-white">
-            {/* Background Decor */}
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-indigo-900/40 via-black to-black opacity-80 -z-10"></div>
             <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-600/30 rounded-full blur-3xl -z-10 animate-pulse"></div>
             <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl -z-10 animate-pulse" style={{ animationDelay: '1s' }}></div>

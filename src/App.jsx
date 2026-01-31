@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Background from './components/Background';
 import Hero from './components/Hero';
 import About from './components/About';
 import Events from './components/Events';
@@ -13,7 +12,6 @@ function App() {
   return (
     <Router>
       <div className="font-['Inter'] min-h-screen text-white overflow-x-hidden">
-        <Background />
         <Routes>
           <Route path="/" element={
             <>
