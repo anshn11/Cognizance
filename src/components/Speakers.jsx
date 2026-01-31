@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { FaLinkedin, FaInstagram } from 'react-icons/fa6';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import speaker1 from '../assets/speaker1.jpg';
@@ -9,10 +10,10 @@ import speaker4 from '../assets/speaker4.jpg';
 gsap.registerPlugin(ScrollTrigger);
 
 const speakers = [
-    { name: "Dr. Sunita Verma", role: "AI Researcher", company: "DeepMind", image: speaker1 },
-    { name: "Vikram Malhotra", role: "Ethical Hacker", company: "BlackHat", image: speaker2 },
-    { name: "Rohan Mehra", role: "Blockchain Expert", company: "Ethereum", image: speaker3 },
-    { name: "Adithya Menon", role: "CTO", company: "FutureCorp", image: speaker4 },
+    { name: "Dr. Sunita Verma", role: "AI Researcher", company: "DeepMind", image: speaker1, linkedin: "#", instagram: "#" },
+    { name: "Vikram Malhotra", role: "Ethical Hacker", company: "BlackHat", image: speaker2, linkedin: "#", instagram: "#" },
+    { name: "Rohan Mehra", role: "Blockchain Expert", company: "Ethereum", image: speaker3, linkedin: "#", instagram: "#" },
+    { name: "Adithya Menon", role: "CTO", company: "FutureCorp", image: speaker4, linkedin: "#", instagram: "#" },
 ];
 
 const Speakers = () => {
@@ -68,7 +69,17 @@ const Speakers = () => {
 
                                 <h3 className="text-2xl font-bold font-['Orbitron'] mb-2 group-hover:text-cyan-300 transition-colors">{speaker.name}</h3>
                                 <p className="text-purple-400 font-bold mb-1">{speaker.role}</p>
-                                <p className="text-slate-400 text-sm">{speaker.company}</p>
+                                <p className="text-slate-400 text-sm mb-4">{speaker.company}</p>
+
+                                {/* Social Icons */}
+                                <div className="flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-4 group-hover:translate-y-0">
+                                    <a href={speaker.linkedin} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-400 transition-colors text-xl">
+                                        <FaLinkedin />
+                                    </a>
+                                    <a href={speaker.instagram} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-purple-400 transition-colors text-xl">
+                                        <FaInstagram />
+                                    </a>
+                                </div>
 
                                 {/* Glitch bar */}
                                 <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-cyan-400 to-purple-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
